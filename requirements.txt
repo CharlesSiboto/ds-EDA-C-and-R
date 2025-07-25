@@ -8,6 +8,6 @@ psycopg2-binary==2.9.7
 SQLAlchemy==2.0.15
 missingno==0.5.2
 plotly==6.2.0
-matplotlib==3.10.3pip show matplotlib
+matplotlib==3.10.3
 pandas==2.3.1
 numpy==2.3.1
