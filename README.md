@@ -7,6 +7,7 @@ Template for creating ds simple projects
 
 - pyenv
 - python==3.11.3
+*The list of requirements is presented on the document: requirements.txt 
 
 ## Setup
 
@@ -96,3 +97,49 @@ Before you can start with plotly in Jupyter Lab you have to install node.js (if 
     pip install -r requirements.txt
     ```
  
+# DS-EDA-C-AND-R
+Project centered on exploratory data. Analyzing robust data using SQL, filtering the most relevant variables with the help of visualizations according to needs of the exercise. 
+
+## EXERCISE
+Use the data from King County Housing. This data set contains information about the home sales in King County (USA). You will use this information to tailor-made a set of houses for your specific client (previously chosen). In this case, the client is Jennifer Montgomery. 
+
+You can find this database on DBeaver:
+
+postgreg > Databases > postgreg > Schemas > eda
+
+You can find the description of each one of the details of the houses on the document: column_names.md
+
+By exploring the data set, create a Join for the 2 tables. Consequently, create a Query that satisfies the necessities of your customer. According to her profile, you should select which details are more important for her. This way, excluding all unnecessary data from the analysis.
+
+Jennifer Montgomery’s profile: “High budget, wants to show off, timing within 1 month, waterfront, renovated, high grades, resell within 1 year.”
+
+Once the query has been formulated, we will fetch the data onto python. The document “Fetching_the_data_eda.ipynb” will guide us through it. 
+
+## FETCHING EDA DATA
+
+The notebook “Fetching_the_data_eda.ipynb” is a guide to connect a PostgreSQL database with Python. There is the possibility to use 2 python packages, in this exercise we use “pyscopg2”. Python allows executing SQL queries and getting result into a Pandas data frame, avoiding exporting a .csv file from DBeaver. 
+
+Using pyscopg2 we connect to the database to retrieve the desire data. For this, we write the information of the database (name, user, host, password, etc.). This notebook also includes how to store information that is not supposed to be shared (.gitignore).
+
+As a final step, we create a .csv file representing the final details proposed on the query. The .csv file information can be found in the project folder under: EDA.csv
+
+## VISUALIZATIONS
+Once all the important data has been filtered and we have a connection to the database so we can use such data, we create visualizations the help us draw conclusions for the exercise. This step is explained in the notebook: EDA_C_and_R.ipynb.
+
+We can create a diverse variety of charts or tables using Python Libraries: Seaborn, Plotly, Matplotlib, etc. The visualizations used are the following: 
+
+- Heatmap: A graphical representation of data where individual values are shown as colors in a matrix.
+- Boxplot: A statistical chart that shows the distribution, median, and outliers of a dataset using quartiles.
+- Scatterplot: A plot that displays the relationship between two variables using points on a Cartesian plane.
+- Histogram: A bar chart that shows the frequency distribution of a continuous variable by grouping values into bins.
+
+The main point of data visualization is to obtain the correlation among the variables. It is easier for the human mind to comprehend this correlation through a graph than reading numbers through a table. The information gather will be the base to formulate the key insights that our customer needs to make an well-founded decision. 
+
+## CONCLUSION
+The finalization of this exercise comes with the list of key insights and recommend houses to buy for our client. These are also presented in the notebook: EDA_C_and_R.ipynb. 
+
+As complementary information we also created a presentation for the client. 
+
+The details of the entire exercise can be found in Github: 
+
+https://github.com/CharlesSiboto/ds-EDA-C-and-R
